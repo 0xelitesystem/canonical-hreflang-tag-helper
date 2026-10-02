@@ -18,13 +18,35 @@ A philatelic stamp album: an album page with each language version set in a perf
 
 Everything runs in your browser. Nothing you type is sent anywhere, stored, or saved. Closing the tab clears it.
 
-## Use it
+## Use
 
 Open `index.html` in any modern browser, or host it as a static page. No build step, no dependencies, no network calls.
+
+1. Enter the canonical URL, the preferred version of the page.
+2. Fill in one row per language or region version with its hreflang code (for example `en-us`) and URL. Click "+ Add version" for more rows.
+3. Optionally enter an x-default URL for users not matched by any version.
+4. Fix any duplicate hreflang warning, then click "Copy block" and paste the tags into the head of every version.
+
+## Why this exists
+
+Hand-writing canonical and hreflang tags is where typos and duplicate codes creep in. This is one HTML file that assembles the block in your browser, with no tracking and nothing to install, released under the MIT license.
 
 ## More
 
 Part of a catalog of single-file browser tools and plain-language references, all MIT licensed and dependency-free: [0xelitesystem.github.io](https://0xelitesystem.github.io/). Built by [elitesystem.ai](https://elitesystem.ai).
+
+## Run locally
+
+```
+git clone https://github.com/0xelitesystem/canonical-hreflang-tag-helper
+cd canonical-hreflang-tag-helper
+```
+
+Open `index.html` in a browser, or serve the folder with `python -m http.server 8000` and visit http://localhost:8000.
+
+## Build
+
+No build step. The whole tool is one `index.html` file with inline CSS and JavaScript.
 
 ## Third-party notices
 
